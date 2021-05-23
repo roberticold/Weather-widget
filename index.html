@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+<title>Weather</title>
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/main.js" defer></script>
+<style>
+
+.header {
+  padding: 60px;
+  text-align: left;
+  background: #ffffff;
+  background-image:url('https://www.pinclipart.com/picdir/big/220-2202620_clouds-material-transprent-free-clouds-vector-png-free.png');
+  background-position:center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+</style>
+<div class="header">
+    <h1>Weather</h1>
+    <p>See how the weather is like in your favourite city</p>
+    <p id='user-time-zone'></p>
+    <p id='noGeo-message'></p>
+    <p id='error-message'></p>
+  </div>
+
+</head>
+
+<body>
+
+    <div class="container py-4" id='background'>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-xl-4 col-xxl-4">
+                <form name='pokeForm' id='pokeDataForm'>
+                    <div class="form-group">
+                        <fieldset>
+                            <label for="pokemon">WEATHER IN </label>
+                            <input class="form-control" type="text" placeholder="City" name='city' id='cityInput'>
+                        </fieldset>
+                        <button onclick="getWeatherByCity()" class = 'btn btn-success id ' id='pokemonSearch' >Search</button>
+                    </div>
+                </form>
+            </div>
+        
+        
+            <div class="col-lg-4 col-md-4 col-xl-4 col-xxl-4">
+                
+                
+                
+            </div>
+            <div class="col-lg-4 col-md-4 col-xl-4 col-xxl-4">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card p-4">
+                                <div class="d-flex">
+                                    <h6 class="flex-grow-1" id='location'>City</h6>
+                                    
+                                    <!-- <h6 id='user-time-zone'>16:08</h6> -->
+                                </div>
+                                <div class="d-flex flex-column temp mt-5 mb-3">
+                                    <h1 class="mb-0 font-weight-bold" id ='temperature-value' id="heading"> 13° C </h1> <span id= 'temperature-description' class="small grey">weatherDeescription</span>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="temp-details flex-grow-1">
+                                        <p class="my-1"> <img src="/icons/B9kqOzp.png" height="17px"> <span id='wind'> 40 km/h </span> </p>
+                                        <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true"></i> <span id='humidity'> 84% </span> </p>
+                                        <!-- <p class="my-1"> <img src="https://i.imgur.com/wGSJ8C5.png" height="17px"> <span> 0.2h </span> </p> -->
+                                    </div>
+                                    <div id="weather-icon">
+                                        <img src="icons/unknown.png" alt="">
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Data HTML Elements -->
+   
+            
+                
+                    
+                
+                
+            
+     
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>

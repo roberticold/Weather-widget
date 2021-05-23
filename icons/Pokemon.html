@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5500/index.html?pokemon=Havana -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here">
+<link rel="stylesheet" href="./Pokemon_files/bootstrap.min.css">
+<link rel="stylesheet" href="./Pokemon_files/all.min.css">
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+<title>Pokemon</title>
+<link rel="stylesheet" href="./Pokemon_files/style.css">
+<script src="./Pokemon_files/axios.min.js.descarga"></script>
+<script src="./Pokemon_files/main.js.descarga" defer=""></script>
+<style>
+
+.header {
+  padding: 60px;
+  text-align: left;
+  background: #ffffff;
+  background-image:url('https://www.pinclipart.com/picdir/big/220-2202620_clouds-material-transprent-free-clouds-vector-png-free.png');
+  background-position:center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+</style>
+</head><body><div class="header">
+    <h1>Weather</h1>
+    <p>See how the weather is like in your favourite city</p>
+  </div>
+
+
+
+
+
+    <div class="container py-4" id="background">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-xl-4 col-xxl-4">
+                <form name="pokeForm" id="pokeDataForm">
+                    <div class="form-group">
+                        <fieldset>
+                            <label for="pokemon">WEATHER IN </label>
+                            <input class="form-control" type="text" placeholder="City" name="pokemon" id="pokemonInput">
+                        </fieldset>
+                        <button onclick="loadData1()" class="btn btn-success id " id="pokemonSearch">Search</button>
+                    </div>
+                </form>
+            </div>
+        
+        
+            <div class="col-lg-4 col-md-4 col-xl-4 col-xxl-4">
+                
+                
+                
+            </div>
+            <div class="col-lg-4 col-md-4 col-xl-4 col-xxl-4">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card p-4">
+                                <div class="d-flex">
+                                    <h6 class="flex-grow-1" id="location">Harwood Heights, US</h6>
+                                    
+                                    <h6 id="user-time-zone">-18000</h6>
+                                </div>
+                                <div class="d-flex flex-column temp mt-5 mb-3">
+                                    <h1 class="mb-0 font-weight-bold" id="temperature-value">21°<span>C</span></h1> <span id="temperature-description" class="small grey">overcast clouds</span>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="temp-details flex-grow-1">
+                                        <p class="my-1"> <img src="./Pokemon_files/B9kqOzp.png" height="17px"> <span id="wind">0.45 mph</span> </p>
+                                        <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true"></i> <span id="humidity">72%</span> </p>
+                                        <!-- <p class="my-1"> <img src="https://i.imgur.com/wGSJ8C5.png" height="17px"> <span> 0.2h </span> </p> -->
+                                    </div>
+                                    <div id="weather-icon"><img src="./Pokemon_files/04n.png"></div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Data HTML Elements -->
+   
+            
+                
+                    
+                
+                
+            
+     
+
+<script src="./Pokemon_files/popper.min.js.descarga"></script>
+<script src="./Pokemon_files/bootstrap.min.js.descarga"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
