@@ -1,7 +1,7 @@
 
 // API KEYS
-let weathear_API_Key = ''
-let timeZone_API_Key=''
+let weathear_API_Key = '3a46a64595b7a7c0c8c48d9970e62d2a'
+let timeZone_API_Key='STUO0MV3A2AO'
 
 
 // kelvin constant to convert to Celcius
@@ -14,7 +14,6 @@ const iconElement = document.getElementById("weather-icon");
 const tempElement = document.getElementById("temperature-value");
 const descElement = document.getElementById("temperature-description");
 const locationElement = document.getElementById("location");
-// const notificationElement = document.getElementById("notification");
 const userHumidityElement = document.getElementById("humidity");
 const userWindElement = document.getElementById("wind");
 
@@ -61,6 +60,7 @@ if('geolocation' in navigator){
 
 // SET USER'S POSITION
 function setPosition(position){
+    
     let user_latitude = position.coords.latitude;
     let user_longitude = position.coords.longitude;
     
@@ -74,8 +74,8 @@ function setPosition(position){
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
 function showError(error){
-    const notificationElement= document.getElementById = "error-message";
-    notificationElement.innerHTML = `${error.message}`;
+    const notificationElement1= document.getElementById = "error-message";
+    notificationElement1.innerHTML = `${error.message}`;
 }
 
 
